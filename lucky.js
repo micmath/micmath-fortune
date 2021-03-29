@@ -3,9 +3,7 @@ function handleRequest(request) {
   const luckyNumber = Math.floor(Math.random() * 100) + 1;
 
   if (pathname.startsWith("/html")) {
-    const html = `<html>
-      <p>Your lucky number is <b>${luckyNumber}</b>.</p>
-      </html>`;
+    const html = '<html><p>Your lucky number is <b>' + luckyNumber + '</b>.</p></html>';
 
     return new Response(html, {
       headers: {
